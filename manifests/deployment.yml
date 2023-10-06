@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: jsuurdpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jsuurdpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: jsuurdpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: jsuurdpipelinesjavascriptdocker 
+          image: crpersonal01.azurecr.io/jsuurdpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
